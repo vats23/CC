@@ -10,10 +10,10 @@ var client = new Client('localhost:2181', "worker-" + Math.floor(Math.random() *
 var payloads = [{ topic: topic }];
 var consumer = new HighLevelConsumer(client, payloads);
 var offset = new Offset(client);
-var port = 3003;
+var port = 3002;
 
 app.get('/', function(req, res){
-    res.sendFile('index.html');
+    res.sendfile('index.html');
 });
 
 io = io.on('connection', function(socket){
